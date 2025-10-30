@@ -1,0 +1,500 @@
+/* ======================================================
+   SV Germania Herolz – Einheitliches Design 2025
+   ====================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* ------------------------------------------------------
+   Grundlayout
+   ------------------------------------------------------ */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto 60px auto;
+  background: rgba(255,255,255,0.92);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------------------------------
+   Header / Navigation
+   ------------------------------------------------------ */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #dbe7ff;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.15);
+}
+
+/* ------------------------------------------------------
+   Footer
+   ------------------------------------------------------ */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 15px;
+  width: 100%;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+}
+
+footer a {
+  color: #dbe7ff;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------
+   Tabellen (Termine)
+   ------------------------------------------------------ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #004aad;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e7f0ff;
+}
+
+/* ------------------------------------------------------
+   Formulare (Anmeldung / Kontakt)
+   ------------------------------------------------------ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.92);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #004aad;
+}
+
+form label {
+  font-weight: 600;
+  color: #004aad;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #004aad;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 74, 173, 0.4);
+}
+
+button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #003580;
+  transform: scale(1.02);
+}
+
+/* ------------------------------------------------------
+   Mannschaftsseite – Kästen
+   ------------------------------------------------------ */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.team-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #004aad;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.team-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.team-card a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.team-card a:hover {
+  color: #002d73;
+  text-decoration: underline;
+}
+
+.team-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------
+   Wasserzeichen SV Herolz
+   ------------------------------------------------------ */
+body::after {
+  content: "SV Herolz";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-weight: 900;
+  font-size: 12vw;
+  color: rgba(0, 74, 173, 0.05);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+header, main, footer, nav, form, section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------
+   Vereinslogo unten rechts
+   ------------------------------------------------------ */
+.logo-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  opacity: 0.7;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.logo-fixed:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------
+   Dark Mode
+   ------------------------------------------------------ */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e3a8a;
+  color: #f1f5f9;
+}
+
+body.dark-mode a {
+  color: #93c5fd;
+}
+
+body.dark-mode a:hover {
+  color: #bfdbfe;
+}
+
+body.dark-mode table {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark-mode th {
+  background-color: #2563eb;
+}
+
+body.dark-mode td {
+  background-color: #111827;
+  color: #e2e8f0;
+}
+
+body.dark-mode tr:nth-child(even) td {
+  background-color: #1e293b;
+}
+
+body.dark-mode .team-card,
+body.dark-mode form,
+body.dark-mode main {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-top: 6px solid #2563eb;
+}
+
+body.dark-mode .team-card h2 {
+  color: #60a5fa;
+}
+
+body.dark-mode .team-card p {
+  color: #dbeafe;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+body.dark-mode button {
+  background-color: #2563eb;
+}
+
+body.dark-mode button:hover {
+  background-color: #1d4ed8;
+}
+
+body.dark-mode::after {
+  color: rgba(255,255,255,0.05);
+}
+
+/* ------------------------------------------------------
+   Responsive Design
+   ------------------------------------------------------ */
+@media (max-width: 768px) {
+  .navbar a {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+  main {
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-fixed {
+    width: 60px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* ======================================================
+   STARTSEITE – Veranstaltungen mit Überschrift + Raster
+   ====================================================== */
+.events {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.events h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #004aad;
+}
+
+.events .subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.event-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #004aad;
+}
+
+.event-info .date {
+  font-weight: 600;
+  color: #444;
+  margin: 8px 0;
+}
+
+.event-info p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------
+   DARK MODE – Veranstaltungen
+   ------------------------------------------------------ */
+body.dark-mode .events h2 {
+  color: #60a5fa;
+}
+
+body.dark-mode .events .subtitle {
+  color: #dbeafe;
+}
+
+body.dark-mode .event-card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .event-card:hover {
+  box-shadow: 0 6px 16px rgba(255,255,255,0.08);
+}
+
+body.dark-mode .event-info h3 {
+  color: #60a5fa;
+}
+
+body.dark-mode .event-info .date {
+  color: #a5b4fc;
+}
+
+body.dark-mode .event-info p {
+  color: #dbeafe;
+}
+
+/* ------------------------------------------------------
+   Responsive für Handy (1 Spalte)
+   ------------------------------------------------------ */
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}

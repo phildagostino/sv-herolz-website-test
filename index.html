@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start | SV Germania Herolz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header>
+  <div class="nav-container">
+    <nav class="navbar">
+      <a href="index.html">Start</a>
+      <a href="teams.html">Mannschaften</a>
+      <a href="termine.html">Termine</a>
+      <a href="anmeldung.html">Anmeldung</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="spenden.html">Spenden</a>
+    </nav>
+    <button id="darkModeToggle" aria-label="Design wechseln" title="Design wechseln">🌙</button>
+  </div>
+</header>
+
+
+  <!-- Hauptinhalt -->
+ <main class="intro">
+  <h1 data-lang="main.welcome">Willkommen beim SV Germania Herolz ⚽</h1>
+  <p data-lang="main.text">
+    Seit 1911 steht der SV Germania Herolz für Leidenschaft, Zusammenhalt und sportlichen Erfolg.
+    Entdecke hier alles rund um unseren Verein – von Mannschaften über Termine bis hin zur Anmeldung.
+  </p>
+
+ <section class="events">
+  <h2>Nächste Veranstaltungen</h2>
+  <p class="subtitle">Erlebe Gemeinschaft, Spaß und Vereinsleben – hier findest du unsere nächsten Events.</p>
+
+  <div class="event-grid">
+    <div class="event-card">
+      <img src="images/team_meeting.png" alt="Mannschaftssitzung">
+      <div class="event-info">
+        <h3>Mannschaftssitzung</h3>
+        <p class="date">📅 26.10.2025</p>
+        <p>Besprechung mit allen Trainern und Spielern zur Planung der Rückrunde.</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/haloween.jpg" alt="Halloween-Feier">
+      <div class="event-info">
+        <h3>Halloween-Feier</h3>
+        <p class="date">📅 31.10.2025</p>
+        <p>Gruselige Party im Vereinsheim mit Musik, Snacks & Kostümwettbewerb!</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/open_day.jpg" alt="Tag der offenen Tür">
+      <div class="event-info">
+        <h3>Tag der offenen Tür</h3>
+        <p class="date">📅 09.11.2025</p>
+        <p>Kommt vorbei, lernt unseren Verein kennen und schaut euch unsere Anlage an!</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/weihnachtsfeier.jpg" alt="Weihnachtsfeier">
+      <div class="event-info">
+        <h3>Weihnachtsfeier</h3>
+        <p class="date">📅 20.12.2025</p>
+        <p>Gemütlicher Jahresabschluss mit Ehrungen, Buffet und Tombola im Vereinsheim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SV Germania Herolz – Alle Rechte vorbehalten</p>
+    <p>Kontakt: <a href="mailto:info@sv-herolz.de">info@sv-herolz.de</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Gespeichertes Theme abrufen
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.textContent = '☀️';
+    }
+
+    // Button klick
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

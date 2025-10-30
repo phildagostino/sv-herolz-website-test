@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Anmeldung | SV Germania Herolz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+      <a href="index.html">Start</a>
+      <a href="teams.html">Mannschaften</a>
+      <a href="termine.html">Termine</a>
+      <a href="anmeldung.html">Anmeldung</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="spenden.html">Spenden</a>
+    </nav>
+</header>
+<main>
+  <h1>Anmeldung</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
+
+    <label for="geburtsdatum">Geburtsdatum:</label>
+    <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+
+    <label for="mannschaft">Mannschaft:</label>
+<select id="team" name="team" required>
+  <option value="">Bitte auswählen</option>
+  <option value="1-mannschaft">1. Mannschaft</option>
+  <option value="2-mannschaft">2. Mannschaft</option>
+  <option value="a-jugend">A-Jugend</option>
+  <option value="b-jugend">B-Jugend</option>
+  <option value="c-jugend">C-Jugend</option>
+  <option value="d-jugend">D-Jugend</option>
+  <option value="e-jugend">E-Jugend</option>
+  <option value="f-jugend">F-Jugend</option>
+  <option value="g-jugend">G-Jugend</option>
+  <option value="betreuer">Trainer / Betreuer</option>
+  <option value="sonstiges">Sonstiges</option>
+</select>
+
+
+    <button type="submit">Anmeldung absenden</button>
+  </form>
+</main>
+
+
+  <footer>
+    <p>© 2025 SV Germania Herolz – Alle Rechte vorbehalten</p>
+    <p>Kontakt: <a href="mailto:info@sv-herolz.de">info@sv-herolz.de</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+</body>
+</html>
+
+
+<img src="images/logo.png" alt="SV Herolz Logo" class="logo-fixed">
+<script>
+  // Prüft gespeichertes Theme und aktiviert es automatisch
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+</script>
+</body>
+</html>

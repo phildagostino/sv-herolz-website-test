@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spenden | SV Germania Herolz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Start</a>
+      <a href="teams.html">Mannschaften</a>
+      <a href="termine.html">Termine</a>
+      <a href="anmeldung.html">Anmeldung</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="spenden.html" style="text-decoration: underline; font-weight: 700;">Spenden</a>
+     
+    </nav>
+  </header>
+
+  <!-- Hauptinhalt -->
+  <main>
+    <h1 style="text-align:center;">Unterstütze den SV Germania Herolz 💙</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
+      Seit 1911 steht der SV Germania Herolz für Leidenschaft, Zusammenhalt und sportlichen Erfolg.
+      Mit deiner Spende hilfst du, unsere Jugendarbeit, Trainingsausrüstung und den Erhalt unserer Anlage zu fördern.
+      Jeder Beitrag zählt – danke für deine Unterstützung!
+    </p>
+
+    <section style="margin-top:40px;">
+      <h2 style="text-align:center;">Spendenmöglichkeiten</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:25px;">
+
+        <!-- PayPal -->
+        <div class="team-card">
+          <h2>💳 PayPal-Spende</h2>
+          <p>Einfach und sicher online spenden über dein PayPal-Konto.</p>
+          <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_BUTTON_ID"
+             target="_blank" class="cta-button">Jetzt mit PayPal spenden</a>
+        </div>
+
+        <!-- Banküberweisung -->
+        <div class="team-card">
+          <h2>🏦 Banküberweisung</h2>
+          <p>Überweise direkt an unseren Verein:</p>
+          <p><strong>Empfänger:</strong> SV Germania Herolz 1911 e.V.<br>
+             <strong>IBAN:</strong> DE12 3456 7890 1234 5678 90<br>
+             <strong>BIC:</strong> GENODEF1XXX<br>
+             <strong>Verwendungszweck:</strong> Spende &lt;Name&gt;
+          </p>
+        </div>
+
+        <!-- Direkte Kontaktspende -->
+        <div class="team-card">
+          <h2>📬 Persönlich spenden</h2>
+          <p>Du möchtest uns direkt unterstützen oder Sachspenden übergeben?<br>
+             Melde dich einfach bei unserem Kassierer-Team per Mail:
+          </p>
+          <p><strong>E-Mail:</strong> <a href="mailto:info@sv-herolz.de">info@sv-herolz.de</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:50px;">
+      <h2 style="text-align:center;">Spendenformular</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Vor- und Nachname" required>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" placeholder="deine@email.de" required>
+
+        <label for="betrag">Spendenbetrag (€):</label>
+        <input type="number" name="betrag" min="1" step="1" placeholder="z. B. 25" required>
+
+        <label for="nachricht">Nachricht (optional):</label>
+        <textarea name="nachricht" rows="3" placeholder="z. B. Zweck oder Anmerkung"></textarea>
+
+        <button type="submit">Spende absenden</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SV Germania Herolz – Alle Rechte vorbehalten</p>
+    <p>Kontakt: <a href="mailto:info@sv-herolz.de">info@sv-herolz.de</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.textContent = '☀️';
+    }
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B-Jugend | SV Germania Herolz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Start</a>
+      <a href="teams.html">Mannschaften</a>
+      <a href="termine.html">Termine</a>
+      <a href="anmeldung.html">Anmeldung</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="spenden.html">Spenden</a>
+    </nav>
+  </header>
+  <main>
+    <h1>B-Jugend</h1>
+
+    <div class="team-info">
+      <img src="images/b-jugend.jpg" alt="B-Jugend Teamfoto" class="team-photo">
+      <div class="team-details">
+        <p><strong>Trainer:</strong> Jonas Beispiel</p>
+        <p><strong>Training:</strong> Montag &amp; Mittwoch, 18:00 – 19:30 Uhr</p>
+        <p><strong>Ort:</strong> Sportplatz SV Herolz</p>
+        <p><strong>Kontakt:</strong> <a href="mailto:b-jugend@sv-herolz.de">b-jugend@sv-herolz.de</a></p>
+      </div>
+    </div>
+
+    <p class="team-description">
+      Die B-Jugend verbindet Technik und Taktik mit Spielfreude.  
+      Hier werden unsere Nachwuchsspieler intensiv auf die A-Jugend vorbereitet.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 SV Germania Herolz – Alle Rechte vorbehalten</p>
+    <p>Kontakt: <a href="mailto:info@sv-herolz.de">info@sv-herolz.de</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <img src="images/logo.png" alt="SV Herolz Logo" class="logo-fixed">
+  <script>
+  // Prüft gespeichertes Theme und aktiviert es automatisch
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+</script>
+</body>
+</html>
